@@ -1,23 +1,14 @@
 import React,{useEffect, useState} from 'react';
-import {getDateAPI} from "../../fetchdata";
 import DateCard from "../DateCard/DateCard";
 
-export default function Date() {
-    const [dates, setDates] = useState("");
-    useEffect(()=>{
-        const getDateList = async () =>{
-            setDates(await getDateAPI());
-        }
-        getDateList();
-    },[])
-    console.log(dates)
+export default function Date({dates, list}) {
     return (
         <div>
             {dates.length
                 ?
-                dates.map((dateandtime)=>{
+                dates.map((dateandtime, index)=>{
                     return (
-                        <DateCard dateandtime = {dateandtime} />
+                        <DateCard key = {index} dateandtime = {dateandtime} info = {list[index]} />
                     )
                 })
                 :

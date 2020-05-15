@@ -1,15 +1,16 @@
 import React from 'react'
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap'
+import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap'
 
-export default function DateCard({dateandtime}) {
+export default function DateCard({dateandtime, info}) {
+    let description = info.weather[0].description;
+    console.log(description); 
     return (
         <div>
             <Card>
-                <CardImg top width="100%" src="" alt="Card image cap" />
                 <CardBody>
                     <CardTitle>{dateandtime}</CardTitle>
-                    <CardText></CardText>
-                    <Button>Button</Button>
+                    <CardText>{description}</CardText>
+                    <Button color="danger">Button</Button>
                 </CardBody>
             </Card>
         </div>
