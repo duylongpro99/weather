@@ -26,11 +26,11 @@ export default function Home() {
     const inform = (data.cnt?
         (
             <div>
-                <Spinner color="success" />
+                <Spinner color="danger" type="grow"/>
                 <Badge color="info" pill>{data.city.name}</Badge>
                 <br />
                 <Button color="info" id="toggler" style={{ marginBottom: '1rem' }}>
-                    Toggle
+                    Position
                 </Button>
                 <UncontrolledCollapse toggler="#toggler">
                     <Card>
