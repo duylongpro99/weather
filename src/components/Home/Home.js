@@ -26,10 +26,11 @@ export default function Home() {
     const inform = (data.cnt?
         (
             <div>
-                <Spinner color="danger" type="grow"/>
-                <Badge color="info" pill>{data.city.name}</Badge>
-                <br />
-                <Button color="info" id="toggler" style={{ marginBottom: '1rem' }}>
+                <div className = {styles.headername}>
+                    <Spinner color="danger" type="grow"/>
+                    <h1>{data.city.name}</h1>
+                </div>
+                <Button className = {styles.position} color="info" id="toggler" style={{ marginBottom: '1rem' }}>
                     Position
                 </Button>
                 <UncontrolledCollapse toggler="#toggler">
