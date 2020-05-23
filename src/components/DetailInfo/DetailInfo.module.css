@@ -1,6 +1,11 @@
-.detailinfo{
-    margin-top: 1rem;
+.modalbody{
+    background-color: rgb(230, 255, 161);
 }
-.card{
+
+.modalheader{ 
+    background-color: rgb(177, 238, 238);
+}
+
+.modalfooter{ 
     background-color: rgb(177, 238, 238);
 }

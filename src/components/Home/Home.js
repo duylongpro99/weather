@@ -21,21 +21,24 @@ export default function Home() {
         }
         getDateList();
     },[])
-
-    console.log(data)
     const inform = (data.cnt?
         (
-            <div>
+            <div className = {styles.backgroundcolor}>
                 <div className = {styles.headername}>
                     <Spinner color="danger" type="grow"/>
+                    <Spinner color="success" type="grow"/>
+                    <Spinner color="info" type="grow"/>
                     <h1>{data.city.name}</h1>
+                    <Spinner color="secondary" type="grow"/>
+                    <Spinner color="light" type="grow"/>
+                    <Spinner color="warning" type="grow"/>
                 </div>
                 <Button className = {styles.position} color="info" id="toggler" style={{ marginBottom: '1rem' }}>
                     Position
                 </Button>
                 <UncontrolledCollapse toggler="#toggler">
-                    <Card>
-                        <CardBody>
+                    <Card className = {styles.uncontrolledCollapse}>
+                        <CardBody className = {styles.coordinate}>
                             <Badge color="danger">Latitude: {data.city.coord.lat}</Badge>
                             <Badge color= "primary">Longitude: {data.city.coord.lon}</Badge>
                         </CardBody>

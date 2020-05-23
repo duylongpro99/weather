@@ -1,0 +1,6 @@
+.cardlist{
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,23 +1,26 @@
 import React from 'react'
-import { Collapse, Card, CardBody, CardText, Progress } from "reactstrap";
+import { Collapse, Card, CardBody, CardText, Progress, Modal, ModalBody, ModalHeader, ModalFooter, Button } from "reactstrap";
 import styles  from "./DetailInfo.module.css";
-export default function DetailInfo({detailInfo, isOpen}) {
+export default function DetailInfo({detailInfo, isOpen, toggle}) {
     const {temp, humidity, windSpeed, windDeg} = detailInfo;
     return (
-        <Collapse className = {styles.detailinfo} isOpen={isOpen}>
-            <Card>
-                <CardBody className = {styles.card}>
-                    <label>Temperature: </label>
-                    <CardText>{temp}</CardText>
-                    <label>Humidity: </label>
-                    <Progress value = {humidity} color = "dark" animated>{humidity}%</Progress>
-                    <br />
-                    <label>Wind Speed: </label>
-                    <CardText>{windSpeed}</CardText>
-                    <label>Wind degree: </label>
-                    <CardText>{windDeg}</CardText>
-                </CardBody>
-            </Card>
-        </Collapse>
+        <Modal isOpen={isOpen} toggle={toggle}>
+            <ModalHeader className = {styles.modalheader} toggle={toggle}>Weather Detail</ModalHeader>
+            <ModalBody className= {styles.modalbody}>
+                <label>Temperature: </label>
+                <CardText>{temp}</CardText>
+                <label>Humidity: </label>
+                <Progress value = {humidity} color = "primary" animated>{humidity}%</Progress>
+                <br />
+                <label>Wind Speed: </label>
+                <CardText>{windSpeed}</CardText>
+                <label>Wind degree: </label>
+                <CardText>{windDeg}</CardText>
+            </ModalBody>
+            <ModalFooter className = {styles.modalfooter}>
+                <Button color="success" onClick={toggle}>Get it</Button>
+            </ModalFooter>
+        </Modal>
     )
 }
+

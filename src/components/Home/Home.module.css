@@ -4,12 +4,26 @@
     box-sizing: border-box;
 }
 
+.backgroundcolor{
+    background-color: rgb(177, 238, 238) !important;
+}
+
 .headername{
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: space-around;  
+    letter-spacing: 2px;  
 }
 
 .position{
-    margin-left: 48%;
+    margin-left: 47%;
+}
+
+.uncontrolledCollapse{
+    background-color: rgb(217, 248, 130) !important;
+}
+
+.coordinate{
+    display: flex;
+    justify-content: space-evenly;
 }
