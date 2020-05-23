@@ -3,7 +3,7 @@ import DateCard from "../DateCard/DateCard";
 import styles from "./Date.module.css";
 
 export default function Date({dates, list}) {
-    let colors = ["danger", "sucess", "info", "secondary", "light", "warning"];
+    let colors = ["#cc5555", "#fa8c32", "#fcff56", "#5dda15", "#7573fc", "#b022cc"];
     let colorList = [];
     let count = 0
     if(dates.length){

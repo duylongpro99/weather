@@ -1,12 +1,15 @@
 import React from 'react'
 import { Collapse, Card, CardBody, CardText, Progress, Modal, ModalBody, ModalHeader, ModalFooter, Button } from "reactstrap";
 import styles  from "./DetailInfo.module.css";
-export default function DetailInfo({detailInfo, isOpen, toggle}) {
+export default function DetailInfo({detailInfo, isOpen, toggle, color}) {
     const {temp, humidity, windSpeed, windDeg} = detailInfo;
+    const modalbody = {
+        backgroundColor: color
+    }
     return (
         <Modal isOpen={isOpen} toggle={toggle}>
             <ModalHeader className = {styles.modalheader} toggle={toggle}>Weather Detail</ModalHeader>
-            <ModalBody className= {styles.modalbody}>
+            <ModalBody style = {modalbody}>
                 <label>Temperature: </label>
                 <CardText>{temp}</CardText>
                 <label>Humidity: </label>

@@ -23,14 +23,17 @@ export default function DateCard({dateandtime, info, color}) {
     const Toggle = () => {
         return setIsOpen(!isOpen);
     }
+    const styleObject = {
+        backgroundColor: color,
+    }
     return (
         <div className = {styles.datecard}>
             <Card>
-                <CardBody className = {styles.datelist}>
+                <CardBody style = {styleObject}>
                     <CardTitle>{dateandtime}</CardTitle>
                     <CardText className={styles.text_description}>{description}</CardText>
                     <Button className = {styles.buttoncard} color="success" onClick = {Toggle}>Detail for this weather</Button>
-                    <DetailInfo detailInfo = {detailInfo} isOpen = {isOpen} toggle = {Toggle} />
+                    <DetailInfo color = {color} detailInfo = {detailInfo} isOpen = {isOpen} toggle = {Toggle} />
                 </CardBody>
             </Card>
         </div>
