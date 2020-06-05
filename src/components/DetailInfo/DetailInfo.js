@@ -1,5 +1,5 @@
 import React from 'react'
-import { Collapse, Card, CardBody, CardText, Progress, Modal, ModalBody, ModalHeader, ModalFooter, Button } from "reactstrap";
+import {CardText, Progress, Modal, ModalBody, ModalHeader, ModalFooter, Button } from "reactstrap";
 import styles  from "./DetailInfo.module.css";
 export default function DetailInfo({detailInfo, isOpen, toggle, color}) {
     const {temp, humidity, windSpeed, windDeg} = detailInfo;

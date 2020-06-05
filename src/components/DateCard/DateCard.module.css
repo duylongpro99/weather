@@ -1,5 +1,6 @@
 .datecard{
     display: flex;
+    position: relative;
     flex-direction: column;
     margin-left: 2rem;
     margin-top: 0.75rem;
@@ -16,10 +17,22 @@
 .text_description{
     text-transform: capitalize;
     font-family: 'Lemonada', cursive;
+    font-size: 15px !important;
+}
+
+.text_title{
+    font-size: 15px !important;
 }
 
 .datelist{
     background-color:rgb(217, 248, 130);
+}
+
+.buttoncard{
+    position: absolute;
+    height: 30%;
+    right: 0;
+    bottom: 0;
 }
 
 .buttoncard:hover{
@@ -31,4 +44,21 @@
 
 .danger{
     background-color: red;
+}
+
+.card{
+    height: 100% !important;
+}
+
+@media screen and (max-width: 985px){
+    .text_description{
+        font-size: 10px !important;
+    }
+    .text_title{
+        font-size: 10px !important;
+    }
+    .buttoncard{
+        font-size: 10px !important;
+    }
+
 }
